@@ -8,10 +8,16 @@ using UnityEngine.UI;
 
 public class Title : MonoBehaviour
 {
-    
-    public GameObject inputField;
+    // input field
+    [SerializeField]private GameObject inputField;
+
+    // your name to store the variable.
 
     [SerializeField] private string yourZombieName;
+
+    // output the name
+
+    [SerializeField] private Text outputString;
    
 
     // Start is called before the first frame update
@@ -23,12 +29,16 @@ public class Title : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     // function to call 
-    public void ReadZombieName()
+    private void ReadZombieName()
     {
+        // set name to the inputfield of the text 
         yourZombieName = inputField.GetComponent<Text>().text;
+        //testin output 
         Debug.Log(yourZombieName);
+        // output the text  to message and zombiename
+        outputString.text = "Welcome fellow zombie " + yourZombieName;
     }
 }
