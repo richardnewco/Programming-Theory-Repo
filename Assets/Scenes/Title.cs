@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 // ui namesapce 
-
 using UnityEngine.UI;
+
+// ui namesapce 
+using UnityEngine.SceneManagement;
+
 
 
 public class Title : MonoBehaviour
@@ -18,7 +21,8 @@ public class Title : MonoBehaviour
     // output the name
 
     [SerializeField] private Text outputString;
-   
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -40,5 +44,17 @@ public class Title : MonoBehaviour
         Debug.Log(yourZombieName);
         // output the text  to message and zombiename
         outputString.text = "Welcome fellow zombie " + yourZombieName;
+        //wait a second then change scenes
+        Invoke("ChangeScene" ,2.0f);
     }
+
+
+    private void ChangeScene()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+
+
+
 }
