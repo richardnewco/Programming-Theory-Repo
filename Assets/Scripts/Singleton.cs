@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using UnityEngine.UI;
+using System;
 
 public class Singleton : MonoBehaviour
 {
     //accessable on any script with the instance
 
     public static Singleton Instance;
+
+   // internal void LoadText()
+    //{
+      //  throw new NotImplementedException();
+   // }
 
     //getting ref to the text
     public string text;
