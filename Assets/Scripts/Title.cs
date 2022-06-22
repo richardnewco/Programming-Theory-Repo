@@ -23,7 +23,7 @@ public class Title : MonoBehaviour
     [SerializeField] private Text outputString;
 
 
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +44,9 @@ public class Title : MonoBehaviour
         Debug.Log(yourZombieName);
         // output the text  to message and zombiename
         outputString.text = "Welcome fellow zombie " + yourZombieName;
+        //save zombie name to singleton
+
+        Singleton.Instance.text = yourZombieName;
         //wait a second then change scenes
         Invoke("ChangeScene" ,2.0f);
     }
