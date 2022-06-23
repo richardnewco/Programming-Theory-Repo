@@ -343,7 +343,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Welcome fellow zombie
+  m_Text: Let's learn together
 --- !u!222 &473625881
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -983,7 +983,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter zombie Name...
+  m_Text: Zombie Name...
 --- !u!222 &1890231283
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1062,7 +1062,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'OOP Zombie Theory Title Screen
+  m_Text: 'Let''s learn about the 4 Zombies of OOP
 
 '
 --- !u!222 &2132516326

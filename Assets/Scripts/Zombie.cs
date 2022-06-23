@@ -14,7 +14,7 @@ public class Zombie : MonoBehaviour
     {
         if(textbox != null)
         {
-            textbox.text = "Welcome " + Singleton.Instance.text;
+            textbox.text = "Welcome " + Singleton.Instance.text + " " + "Let's learn about the  4 zombies of OOP "; 
         }
         
         

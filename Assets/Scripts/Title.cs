@@ -43,7 +43,7 @@ public class Title : MonoBehaviour
         //testin output 
         Debug.Log(yourZombieName);
         // output the text  to message and zombiename
-        outputString.text = "Welcome fellow zombie " + yourZombieName;
+        outputString.text = "Let's learn together " + yourZombieName;
         //save zombie name to singleton
 
         Singleton.Instance.text = yourZombieName;
