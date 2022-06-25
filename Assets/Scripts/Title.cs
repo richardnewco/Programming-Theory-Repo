@@ -8,7 +8,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-
 public class Title : MonoBehaviour
 {
     // input field
@@ -22,8 +21,30 @@ public class Title : MonoBehaviour
 
     [SerializeField] private Text outputString;
 
+    // getter and setter
 
-    
+    private string texty;
+
+    public string Texty
+    {
+        get
+        {
+            // assigna  name to input field
+            yourZombieName = inputField.GetComponent<Text>().text;
+            // assign that to texty variable
+            texty = yourZombieName;
+
+            return texty;
+
+        }
+        set
+        {
+            // set the output to texty 
+           texty = outputString.text;
+            // set that to the value
+            texty = value;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -38,15 +59,12 @@ public class Title : MonoBehaviour
     // function to call 
     private void ReadZombieName()
     {
-        // set name to the inputfield of the text 
-        yourZombieName = inputField.GetComponent<Text>().text;
-        //testin output 
-        Debug.Log(yourZombieName);
-        // output the text  to message and zombiename
-        outputString.text = "Let's learn together " + yourZombieName;
-        //save zombie name to singleton
+        // output the text  to message and zombienamet
+        outputString.text = "Let's learn together " + Texty;
 
-        Singleton.Instance.text = yourZombieName;
+        //save zombie name to singleton
+        Singleton.Instance.text = Texty;
+
         //wait a second then change scenes
         Invoke("ChangeScene" ,2.0f);
     }
