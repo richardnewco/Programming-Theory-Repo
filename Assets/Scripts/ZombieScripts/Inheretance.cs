@@ -19,11 +19,17 @@ public class Inheretance : MonoBehaviour
 
     [SerializeField] private AudioSource audioSource;
 
+    // get ref to animation
+    private Animator anim;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        // audio source component
         audioSource = GetComponent<AudioSource>();
+        //animation component
+        anim = GetComponent<Animator>();
 
 
     }
