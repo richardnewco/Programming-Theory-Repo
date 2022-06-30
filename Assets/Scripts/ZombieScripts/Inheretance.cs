@@ -20,7 +20,7 @@ public class Inheretance : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
 
     // get ref to animation
-    private Animator anim;
+    [SerializeField]private Animator anim;
 
 
     // Start is called before the first frame update
@@ -41,6 +41,8 @@ public class Inheretance : MonoBehaviour
     }
     public virtual void ZombieMove()
     {
+
+       
         // move the zombie
         speedO = true;
         // play the audio\
@@ -71,6 +73,8 @@ public class Inheretance : MonoBehaviour
         if (speedO == true)
         {
            zombieI. transform.Translate(Vector3.forward * speeds * Time.deltaTime);
+           
+            
 
         }
     }
@@ -79,6 +83,7 @@ public class Inheretance : MonoBehaviour
     {
         //stop the zombie
         speedO = false;
+        anim.SetBool("HandBreathe", true);
     }
 
 }
