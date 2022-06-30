@@ -30,8 +30,6 @@ public class Inheretance : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         //animation component
         anim = GetComponent<Animator>();
-
-
     }
 
     // Update is called once per frame
@@ -40,20 +38,15 @@ public class Inheretance : MonoBehaviour
         ZombieMovingForward();
     }
     public virtual void ZombieMove()
-    {
-
-       
+    { 
         // move the zombie
         speedO = true;
         // play the audio\
         ZombieSound();
         // print the text
         TextBox();
-
         // stop the zombie after 2 secosa
         Invoke("StopZombie", 2.0f);
-
-        //after 2 seconds stop the zombie an have him sit there.
 
     }
     public virtual void ZombieSound()
@@ -66,16 +59,15 @@ public class Inheretance : MonoBehaviour
         // get reference to the text box
         texty.text = "fuk you";
     }
-    // moving the zombie forward
+  
 
     public virtual void ZombieMovingForward()
     {
+        // if the bool is true
         if (speedO == true)
         {
+            // move the zombie
            zombieI. transform.Translate(Vector3.forward * speeds * Time.deltaTime);
-           
-            
-
         }
     }
 
@@ -83,7 +75,7 @@ public class Inheretance : MonoBehaviour
     {
         //stop the zombie
         speedO = false;
-        anim.SetBool("HandBreathe", true);
+      
     }
 
 }

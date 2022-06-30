@@ -14,7 +14,7 @@ public class Zombie : MonoBehaviour
     {
         if(textbox != null)
         {
-            textbox.text = "Welcome " + Singleton.Instance.text +
+            textbox.text = "Welcome abstracton" +
 
                " Click on one of the buttons to learm more.";
 
