@@ -13,18 +13,23 @@ public class Zombie : MonoBehaviour
     void Start()
     {
 
-        textbox = GetComponent<Text>();
+       // textbox = GetComponent<Text>();
 
-       
-        if(textbox != null)
+
+        textbox = GameObject.FindWithTag("Inher").GetComponent<Text>();
+
+        if (textbox != null)
         {
-            textbox.text = "Welcome " + Singleton.Instance.text +
+            Debug.Log("text box exists");
 
-               " Click on one of the buttons to learm more.";
+            textbox.text = "Welcome " + Singleton.Instance.text+
+
+              " Click on one of the buttons to learm more.";
 
 
 
         }
+         
 
 
 

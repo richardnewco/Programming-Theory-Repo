@@ -13,7 +13,7 @@ public class Inheretance : MonoBehaviour
 
     //get ref to the textfield
 
-      private Text textyI;
+    private Text textyI;
 
     // get ref to audiosource
 
@@ -26,14 +26,23 @@ public class Inheretance : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        // get the gameobject  tag "hand"
+      
+        zombieI = GameObject.FindWithTag("Hand");
+        if(zombieI != null)
+        {
+
+            Debug.Log("zombie hand exists");
+        }
         // audio source component
 
-       audioSourceI = GetComponent<AudioSource>();
+        audioSourceI = GetComponent<AudioSource>();
 
         //animation component
         animI = GetComponent<Animator>();
 
-        textyI = GetComponent<Text>();
+        textyI =  GameObject.FindWithTag("Inher").GetComponent<Text>();
     }
 
     // Update is called once per frame
