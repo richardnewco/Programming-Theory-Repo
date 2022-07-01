@@ -7,29 +7,29 @@ public class Inheretance : MonoBehaviour
 {
     [SerializeField] private GameObject zombieI;
 
-    [SerializeField] private float speeds;
+    [SerializeField] private float speedsI;
 
-    [SerializeField] private bool speedO = false;
+    [SerializeField] private bool speedOI = false;
 
     //get ref to the textfield
 
-    [SerializeField] private Text texty;
+    [SerializeField] private Text textyI;
 
     // get ref to audiosource
 
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSourceI;
 
     // get ref to animation
-    [SerializeField]private Animator anim;
+    [SerializeField]private Animator animI;
 
 
     // Start is called before the first frame update
     void Start()
     {
         // audio source component
-        audioSource = GetComponent<AudioSource>();
+        audioSourceI = GetComponent<AudioSource>();
         //animation component
-        anim = GetComponent<Animator>();
+        animI = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -40,7 +40,7 @@ public class Inheretance : MonoBehaviour
     public virtual void ZombieMove()
     { 
         // move the zombie
-        speedO = true;
+        speedOI = true;
         // play the audio\
         ZombieSound();
         // print the text
@@ -51,30 +51,30 @@ public class Inheretance : MonoBehaviour
     }
     public virtual void ZombieSound()
     {
-        audioSource.Play();
+        audioSourceI.Play();
     }
 
     public virtual void TextBox()
     {
         // get reference to the text box
-        texty.text = "fuk you";
+        textyI.text = "fuk you";
     }
   
 
     public virtual void ZombieMovingForward()
     {
         // if the bool is true
-        if (speedO == true)
+        if (speedOI == true)
         {
             // move the zombie
-           zombieI. transform.Translate(Vector3.forward * speeds * Time.deltaTime);
+            zombieI.transform.Translate(Vector3.forward * speedsI * Time.deltaTime);
         }
     }
 
     public virtual void StopZombie()
     {
         //stop the zombie
-        speedO = false;
+        speedOI = false;
       
     }
 

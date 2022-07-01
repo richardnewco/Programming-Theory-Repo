@@ -871,11 +871,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombieI: {fileID: 1091789005}
-  speeds: 1
-  speedO: 0
-  texty: {fileID: 1878294222}
-  audioSource: {fileID: 951863006}
-  anim: {fileID: 951863007}
+  speedsI: 1
+  speedOI: 0
+  textyI: {fileID: 1878294222}
+  audioSourceI: {fileID: 951863006}
+  animI: {fileID: 951863007}
 --- !u!82 &951863006
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1194,7 +1194,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1093562283}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1675889777}
+        m_TargetAssemblyTypeName: Polymorphism, Assembly-CSharp
+        m_MethodName: ZombieMove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1093562283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1501,11 +1513,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombieI: {fileID: 0}
-  speeds: 0
-  speedO: 0
-  texty: {fileID: 1503674812}
-  audioSource: {fileID: 1503674817}
-  anim: {fileID: 1503674815}
+  speedsI: 0
+  speedOI: 0
+  textyI: {fileID: 0}
+  audioSourceI: {fileID: 0}
+  animI: {fileID: 0}
   zombieA: {fileID: 188245372}
   speedsA: 1
   speedOA: 0
@@ -1783,6 +1795,9 @@ GameObject:
   - component: {fileID: 1675889774}
   - component: {fileID: 1675889776}
   - component: {fileID: 1675889775}
+  - component: {fileID: 1675889777}
+  - component: {fileID: 1675889779}
+  - component: {fileID: 1675889778}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1853,6 +1868,145 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675889773}
   m_CullTransparentMesh: 1
+--- !u!114 &1675889777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675889773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a14ff799a96b45a5825f55ca6d4077e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombieI: {fileID: 0}
+  speedsI: 0
+  speedOI: 0
+  textyI: {fileID: 0}
+  audioSourceI: {fileID: 0}
+  animI: {fileID: 0}
+  zombieP: {fileID: 1927221360}
+  speedP: 1
+  speedBP: 0
+  textPp: {fileID: 1878294222}
+  audioSource: {fileID: 1675889779}
+  animP: {fileID: 1675889778}
+--- !u!95 &1675889778
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675889773}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &1675889779
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675889773}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1676482813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2286,18 +2440,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2803980ef4c5c4e599670874a838870b, type: 3}
   m_PrefabInstance: {fileID: 788857215}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1927221361
-MonoBehaviour:
+--- !u!95 &1927221362
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927221360}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a14ff799a96b45a5825f55ca6d4077e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0b8e2db3785f544b0bd1087679193700, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1975944066
 GameObject:
   m_ObjectHideFlags: 0
