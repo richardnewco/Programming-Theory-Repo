@@ -528,18 +528,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1d1ed834fa60a47a6a8ff3ed46696bcd, type: 3}
   m_PrefabInstance: {fileID: 1320670005}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &242782356
-MonoBehaviour:
+--- !u!95 &242782357
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 242782355}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 406bf8e5c25624290987ab24099743d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 251e2e51e521c4e16b2a42e0a811f5d9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &533206006
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,6 +558,9 @@ GameObject:
   - component: {fileID: 533206007}
   - component: {fileID: 533206009}
   - component: {fileID: 533206008}
+  - component: {fileID: 533206010}
+  - component: {fileID: 533206011}
+  - component: {fileID: 533206012}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -621,6 +631,139 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533206006}
   m_CullTransparentMesh: 1
+--- !u!114 &533206010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533206006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 406bf8e5c25624290987ab24099743d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zombieE: {fileID: 242782355}
+  speedE: 1
+  speedeE: 0
+  textE: {fileID: 1878294222}
+  audioSourceE: {fileID: 0}
+  animE: {fileID: 533206011}
+--- !u!95 &533206011
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533206006}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!82 &533206012
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533206006}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &788857215
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -870,12 +1013,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0c4c15e8c80a423bb850b6b63d349d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombieI: {fileID: 1091789005}
-  speedsI: 1
-  speedOI: 0
-  textyI: {fileID: 1878294222}
-  audioSourceI: {fileID: 951863006}
-  animI: {fileID: 951863007}
 --- !u!82 &951863006
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1512,12 +1649,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a262fd03491a4cd8b81ce54b28705db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombieI: {fileID: 0}
-  speedsI: 0
-  speedOI: 0
-  textyI: {fileID: 0}
-  audioSourceI: {fileID: 0}
-  animI: {fileID: 0}
   zombieA: {fileID: 188245372}
   speedsA: 1
   speedOA: 0
@@ -1880,12 +2011,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a14ff799a96b45a5825f55ca6d4077e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombieI: {fileID: 0}
-  speedsI: 0
-  speedOI: 0
-  textyI: {fileID: 0}
-  audioSourceI: {fileID: 0}
-  animI: {fileID: 0}
   zombieP: {fileID: 1927221360}
   speedP: 1
   speedBP: 0
@@ -2089,7 +2214,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1676482816}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 533206010}
+        m_TargetAssemblyTypeName: Encspsulation, Assembly-CSharp
+        m_MethodName: ZombieMove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1676482816
 MonoBehaviour:
   m_ObjectHideFlags: 0

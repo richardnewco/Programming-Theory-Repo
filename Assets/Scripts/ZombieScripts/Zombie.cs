@@ -12,6 +12,10 @@ public class Zombie : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        textbox = GetComponent<Text>();
+
+       
         if(textbox != null)
         {
             textbox.text = "Welcome " + Singleton.Instance.text +
@@ -26,9 +30,5 @@ public class Zombie : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

@@ -5,31 +5,35 @@ using UnityEngine.UI;
 
 public class Inheretance : MonoBehaviour
 {
-    [SerializeField] private GameObject zombieI;
+     private GameObject zombieI;
 
-    [SerializeField] private float speedsI;
+      private float speedsI =1.0f;
 
-    [SerializeField] private bool speedOI = false;
+    private bool speedOI = false;
 
     //get ref to the textfield
 
-    [SerializeField] private Text textyI;
+      private Text textyI;
 
     // get ref to audiosource
 
-    [SerializeField] private AudioSource audioSourceI;
+    private AudioSource audioSourceI;
 
     // get ref to animation
-    [SerializeField]private Animator animI;
+     private Animator animI;
 
 
     // Start is called before the first frame update
     void Start()
     {
         // audio source component
-        audioSourceI = GetComponent<AudioSource>();
+
+       audioSourceI = GetComponent<AudioSource>();
+
         //animation component
         animI = GetComponent<Animator>();
+
+        textyI = GetComponent<Text>();
     }
 
     // Update is called once per frame
