@@ -22,6 +22,8 @@ public class Inheretance : MonoBehaviour
     // get ref to animation
      private Animator animI;
 
+    private int num = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +53,8 @@ public class Inheretance : MonoBehaviour
         ZombieMovingForward();
     }
     public virtual void ZombieMove()
-    { 
+    {
+        num++;
         // move the zombie
         speedOI = true;
         // play the audio\
@@ -79,8 +82,9 @@ public class Inheretance : MonoBehaviour
         // if the bool is true
         if (speedOI == true)
         {
+            MovingBacknForward();
             // move the zombie
-            zombieI.transform.Translate(Vector3.forward * speedsI * Time.deltaTime);
+            // zombieI.transform.Translate(Vector3.forward * speedsI * Time.deltaTime);
         }
     }
 
@@ -89,6 +93,23 @@ public class Inheretance : MonoBehaviour
         //stop the zombie
         speedOI = false;
       
+    }
+    public virtual void MovingBacknForward()
+    {
+        //added one.
+
+        // if it is even move forward 
+        if (num % 2 == 0)
+        {
+            //move the zombie
+            zombieI.transform.Translate(Vector3.back * speedsI * Time.deltaTime);
+        }
+        else
+        {
+            zombieI.transform.Translate(Vector3.forward * speedsI * Time.deltaTime);
+
+        }
+
     }
 
 }

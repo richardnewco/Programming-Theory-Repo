@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Polymorphism : Inheretance 
+public class Polymorphism : Inheretance
 {
     [SerializeField] private GameObject zombieP;
 
@@ -22,6 +22,8 @@ public class Polymorphism : Inheretance
     // get ref to animation
     [SerializeField] private Animator animP;
 
+    private int num = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,8 +41,9 @@ public class Polymorphism : Inheretance
     }
     public override void ZombieMove()
     {
+        num++;
         // move the zombie
-        speedBP= true;
+        speedBP = true;
         // play the audio\
         ZombieSound();
         // print the text
@@ -67,7 +70,8 @@ public class Polymorphism : Inheretance
         if (speedBP == true)
         {
             // move the zombie
-            zombieP.transform.Translate(Vector3.forward * speedP * Time.deltaTime);
+            // zombieP.transform.Translate(Vector3.forward * speedP * Time.deltaTime);
+            MovingBacknForward();
         }
     }
 
@@ -77,6 +81,22 @@ public class Polymorphism : Inheretance
         speedBP = false;
 
     }
+    public override void MovingBacknForward()
+    {
+        //added one.
 
+        // if it is even move forward 
+        if (num % 2 == 0)
+        {
+            //move the zombie
+            zombieP.transform.Translate(Vector3.back * speedP * Time.deltaTime);
+        }
+        else
+        {
+            zombieP.transform.Translate(Vector3.forward * speedP * Time.deltaTime);
+
+        }
+
+    }
 }
 

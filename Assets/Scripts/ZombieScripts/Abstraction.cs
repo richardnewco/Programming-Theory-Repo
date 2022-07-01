@@ -25,10 +25,13 @@ public class Abstraction : Inheretance
     // get ref to animation
     [SerializeField] private Animator animA;
 
+    [SerializeField] private int num = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        // created a var
+        
     }
 
     // Update is called once per frame
@@ -37,12 +40,21 @@ public class Abstraction : Inheretance
         // if bool is true 
         if (speedOA == true)
         {
+            MovingBacknForward();
             //move the zombie
-            zombieA.transform.Translate(Vector3.forward * speedsA * Time.deltaTime);
+            //zombieA.transform.Translate(Vector3.forward * speedsA * Time.deltaTime);
+            // MovingBacknForward();
+
         }
     }
     public override void ZombieMove()
     {
+       
+        //added one.
+        num++;
+
+        Debug.Log(num);
+
         // bool
         speedOA = true;
         //text
@@ -69,6 +81,25 @@ public class Abstraction : Inheretance
     {
         //stop the zombie
         speedOA = false;
+
+    }
+    public override void MovingBacknForward()
+    {
+        //added one.
+       
+        // if it is even move forward 
+        if(num % 2 == 0)
+        {
+            //move the zombie
+            zombieA.transform.Translate(Vector3.back * speedsA * Time.deltaTime);
+        }
+        else
+        {
+            zombieA.transform.Translate(Vector3.forward * speedsA * Time.deltaTime);
+
+        }
+
+
 
     }
 

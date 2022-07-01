@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Encspsulation :Inheretance
+public class Encspsulation : Inheretance
 {
 
     [SerializeField] private GameObject zombieE;
@@ -23,6 +23,8 @@ public class Encspsulation :Inheretance
     // get ref to animation
     [SerializeField] private Animator animE;
 
+    private int num = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,7 @@ public class Encspsulation :Inheretance
     }
     public override void ZombieMove()
     {
+        num++;
         // move the zombie
         speedeE = true;
         // play the audio
@@ -68,7 +71,8 @@ public class Encspsulation :Inheretance
         if (speedeE == true)
         {
             // move the zombie
-            zombieE.transform.Translate(Vector3.forward * speedE * Time.deltaTime);
+            // zombieE.transform.Translate(Vector3.forward * speedE * Time.deltaTime);
+            MovingBacknForward();
         }
     }
 
@@ -78,7 +82,23 @@ public class Encspsulation :Inheretance
         speedeE = false;
 
     }
+    public virtual void MovingBacknForward()
+    {
+        //added one.
 
+        // if it is even move forward 
+        if (num % 2 == 0)
+        {
+            //move the zombie
+            zombieE.transform.Translate(Vector3.back * speedE * Time.deltaTime);
+        }
+        else
+        {
+            zombieE.transform.Translate(Vector3.forward * speedE * Time.deltaTime);
+
+        }
+
+    }
 }
 
 
