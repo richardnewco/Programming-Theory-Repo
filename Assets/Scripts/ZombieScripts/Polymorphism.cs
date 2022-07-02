@@ -22,7 +22,7 @@ public class Polymorphism : Inheretance
     // get ref to animation
     [SerializeField] private Animator animP;
 
-    private int num = 0;
+    private int numP = 0;
 
 
     // Start is called before the first frame update
@@ -41,7 +41,7 @@ public class Polymorphism : Inheretance
     }
     public override void ZombieMove()
     {
-        num++;
+        numP++;
         // move the zombie
         speedBP = true;
         // play the audio\
@@ -86,7 +86,7 @@ public class Polymorphism : Inheretance
         //added one.
 
         // if it is even move forward 
-        if (num % 2 == 0)
+        if (numP % 2 == 0)
         {
             //move the zombie
             zombieP.transform.Translate(Vector3.back * speedP * Time.deltaTime);

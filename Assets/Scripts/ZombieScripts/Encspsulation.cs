@@ -23,7 +23,7 @@ public class Encspsulation : Inheretance
     // get ref to animation
     [SerializeField] private Animator animE;
 
-    private int num = 0;
+    private int numE = 0;
 
 
     // Start is called before the first frame update
@@ -42,7 +42,7 @@ public class Encspsulation : Inheretance
     }
     public override void ZombieMove()
     {
-        num++;
+        numE++;
         // move the zombie
         speedeE = true;
         // play the audio
@@ -82,12 +82,12 @@ public class Encspsulation : Inheretance
         speedeE = false;
 
     }
-    public virtual void MovingBacknForward()
+    public override void MovingBacknForward()
     {
         //added one.
 
         // if it is even move forward 
-        if (num % 2 == 0)
+        if (numE % 2 == 0)
         {
             //move the zombie
             zombieE.transform.Translate(Vector3.back * speedE * Time.deltaTime);
