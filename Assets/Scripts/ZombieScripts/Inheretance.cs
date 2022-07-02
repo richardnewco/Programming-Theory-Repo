@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class Inheretance : MonoBehaviour
 {
-     private GameObject zombieI;
+    private GameObject zombieI;
 
-      private float speedsI =1.0f;
+    private float speedsI = 1.0f;
 
     private bool speedOI = false;
 
@@ -20,7 +20,7 @@ public class Inheretance : MonoBehaviour
     private AudioSource audioSourceI;
 
     // get ref to animation
-     private Animator animI;
+    private Animator animI;
 
     private int numI = 0;
 
@@ -30,9 +30,9 @@ public class Inheretance : MonoBehaviour
     {
 
         // get the gameobject  tag "hand"
-      
+
         zombieI = GameObject.FindWithTag("Hand");
-        if(zombieI != null)
+        if (zombieI != null)
         {
 
             Debug.Log("zombie hand exists");
@@ -44,7 +44,7 @@ public class Inheretance : MonoBehaviour
         //animation component
         animI = GetComponent<Animator>();
 
-        textyI =  GameObject.FindWithTag("Inher").GetComponent<Text>();
+        textyI = GameObject.FindWithTag("Inher").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -54,6 +54,8 @@ public class Inheretance : MonoBehaviour
     }
     public virtual void ZombieMove()
     {
+
+
         numI++;
         // move the zombie
         speedOI = true;
@@ -75,7 +77,7 @@ public class Inheretance : MonoBehaviour
         // get reference to the text box
         textyI.text = "fuk you";
     }
-  
+
 
     public virtual void ZombieMovingForward()
     {
@@ -92,7 +94,7 @@ public class Inheretance : MonoBehaviour
     {
         //stop the zombie
         speedOI = false;
-      
+
     }
     public virtual void MovingBacknForward()
     {
@@ -111,5 +113,5 @@ public class Inheretance : MonoBehaviour
         }
 
     }
-
 }
+    
