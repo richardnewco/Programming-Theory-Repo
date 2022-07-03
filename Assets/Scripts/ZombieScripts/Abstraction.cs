@@ -67,7 +67,7 @@ public class Abstraction : Inheretance
     public override void TextBox()
     {
         // get reference to the text box
-        textyA.text = "Abstraction is  reducing duplicate code by “abstracting out” repeated details or information.  We used abstraction in this project , by simplifying the code in the base class 'Inheretance' by abstractout the inheretance variables making sure  it did not duplicate variables throughout our other inhereted classes. ";
+        textyA.text = "Abstraction is  reducing duplicate code by “abstracting out” repeated details or information.  We used abstraction in this project , by simplifying the code in the base class 'Inheretance' by abstracting out  the inheretance variables making sure  it did not duplicate variables throughout our other inhereted classes.We also used it by using only one text box for the information text of the game. ";
 
     }
     public override void StopZombie()
