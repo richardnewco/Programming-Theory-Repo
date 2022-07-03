@@ -27,12 +27,8 @@ public class Abstraction : Inheretance
 
     [SerializeField] private int numA = 0;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-        
-    }
+   
+    
 
     // Update is called once per frame
     private void Update()
@@ -71,8 +67,8 @@ public class Abstraction : Inheretance
     public override void TextBox()
     {
         // get reference to the text box
-        textyA.text = "doggy god";
-      
+        textyA.text = "Abstraction is  reducing duplicate code by “abstracting out” repeated details or information.  We used abstraction in this project , by simplifying the code in the base class 'Inheretance' by abstractout the inheretance variables making sure  it did not duplicate variables throughout our other inhereted classes. ";
+
     }
     public override void StopZombie()
     {
@@ -82,8 +78,7 @@ public class Abstraction : Inheretance
     }
     public override void MovingBacknForward()
     {
-        
-       
+          
         // if it is even move forward 
         if(numA % 2 == 0)
         {
@@ -96,10 +91,7 @@ public class Abstraction : Inheretance
 
         }
 
-
-
     }
-
 
 }
 
