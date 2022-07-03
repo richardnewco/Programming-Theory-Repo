@@ -61,8 +61,7 @@ public class Encspsulation : Inheretance
     public override void TextBox()
     {
         // get reference to the text box
-        textE.text = "Encapsulation data means manipulating the data together in a class, protecting it from misuse by other classes.We uses this by making sure all zombies have a single class and the  variables and methods  are private and cannot be accesed by other classes, except if they are overriden but still marking them as private";
-
+        textE.text = "Encapsulation  means protecting data, we did this be using a getter and setter in the title screen. We also protected all variables by setting them as private";
 
     }
 

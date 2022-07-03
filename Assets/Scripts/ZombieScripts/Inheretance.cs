@@ -55,7 +55,6 @@ public class Inheretance : MonoBehaviour
     public virtual void ZombieMove()
     {
 
-
         numI++;
         // move the zombie
         speedOI = true;
@@ -75,10 +74,8 @@ public class Inheretance : MonoBehaviour
     public virtual void TextBox()
     {
         // get reference to the text box
-        textyI.text = "Inheritance  means, child classes deriving (or “inheriting”) behavior from parent classes. We used inheretance in this project by having all the zombie classes inheret from the Inheretance class and  overriding the  same functions with different variables.";
-
+        textyI.text = "Inheretance was used in the project by having the base class 'Inheretance' and having it inheret through the other zombie child classes. We did ths by overriding the  functions";
     }
-
 
     public virtual void ZombieMovingForward()
     {

@@ -60,7 +60,7 @@ public class Polymorphism : Inheretance
     public override void TextBox()
     {
         // get reference to the text box
-        textPp.text = "Polymorphism: changing (“morphing”) methods into many (“poly”) forms (i.e., method overloading and method overriding)" + "We used methods for most single actions of the classes, we inherested the same classe where necessary and override these methods  to keep the code clean.";
+        textPp.text = "Polymorphism is where we overloaded the functions, an example of this is where we used the move forward function.All zombie have a different way of moving.An example is the skull moves vertically where the girl moves horizontally.";
 
     }
 
