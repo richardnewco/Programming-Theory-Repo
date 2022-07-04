@@ -74,7 +74,7 @@ public class Inheretance : MonoBehaviour
     public virtual void TextBox()
     {
         // get reference to the text box
-        textyI.text = "Inheretance was used in the project by having the base class 'Inheretance' and having it inheret through the other zombie child classes. We did ths by overriding the  functions";
+        textyI.text = "Inheretance was used in the project by having the base class 'Inheritance' inheretning through the other zombie child classes. We did ths by overriding the  functions";
     }
 
     public virtual void ZombieMovingForward()
