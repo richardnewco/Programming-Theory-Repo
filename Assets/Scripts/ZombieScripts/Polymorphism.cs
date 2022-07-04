@@ -60,7 +60,7 @@ public class Polymorphism : Inheretance
     public override void TextBox()
     {
         // get reference to the text box
-        textPp.text = "Polymorphism is where we overloaded the functions, an example of this is where we used the move forward function.All zombie have a different way of moving.An example is the skull moves vertically where the girl moves horizontally.";
+        textPp.text = "Polymorphism is where we overloaded the functions, an example of this is where we used the move forward function.All zombie have a different way of moving.An example of this 'Polymorphism' is the skull moves vertically where the girl moves horizontally.";
 
     }
 

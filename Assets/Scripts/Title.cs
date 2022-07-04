@@ -21,7 +21,7 @@ public class Title : MonoBehaviour
 
     [SerializeField] private Text outputString;
 
-    // getter and setter
+    // ENCAPSULATION
 
     private string texty;
 

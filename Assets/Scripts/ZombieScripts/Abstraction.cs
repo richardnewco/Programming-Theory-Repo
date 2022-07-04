@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+// INHERITANCE
 public class Abstraction : Inheretance
 {
 
@@ -42,6 +44,8 @@ public class Abstraction : Inheretance
 
         }
     }
+
+    // POLYMORPHISM”
     public override void ZombieMove()
     {
        
@@ -67,7 +71,7 @@ public class Abstraction : Inheretance
     public override void TextBox()
     {
         // get reference to the text box
-        textyA.text = "Abstraction .Functions included in the game are :  Moving back and forward,zombie sound,stop zombie and a textbox"; 
+        textyA.text = "Abstraction Functions included in the game are :  Movingnforward(),ZombieSound(),StopZombie() and a textbox()"; 
     }
     public override void StopZombie()
     {
@@ -75,6 +79,8 @@ public class Abstraction : Inheretance
         speedOA = false;
 
     }
+
+    // ABSTRACTION
     public override void MovingBacknForward()
     {
           
@@ -84,6 +90,7 @@ public class Abstraction : Inheretance
             //move the zombie
             zombieA.transform.Translate(Vector3.back * speedsA * Time.deltaTime);
         }
+             //else it is odd and move in the opposite direction
         else
         {
             zombieA.transform.Translate(Vector3.forward * speedsA * Time.deltaTime);
